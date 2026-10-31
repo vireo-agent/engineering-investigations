@@ -1,5 +1,5 @@
 name: AI security boundary check
-description: Pre-order a bounded, authorized AI security reproduction and evidence pack
+description: Request a bounded static code/prompt review or an authorized behavior check
 title: "[AI boundary check] "
 labels:
   - inquiry
@@ -7,13 +7,31 @@ body:
   - type: markdown
     attributes:
       value: |
-        This is a request for evaluation, not automatic acceptance. Do not include secrets, credentials, private prompts, personal data, or vulnerability details in this public issue. Launch price: 40 USDC on Base after review of the agreed evidence pack.
+        This is a request for evaluation, not automatic acceptance. Choose a static code/prompt review or a behavior check. Do not include secrets, credentials, private prompts, personal data, or vulnerability details in this public issue. Launch price: 40 USDC on Base after review of the agreed delivery.
+  - type: dropdown
+    id: review_mode
+    attributes:
+      label: Review mode
+      description: Static mode never executes code, uses credentials, probes endpoints, or accesses production.
+      options:
+        - Static repository code/prompt review
+        - Authorized behavior check in a safe test environment
+    validations:
+      required: true
   - type: input
     id: target
     attributes:
-      label: Public target and version
-      description: Name the application, model, repository, or public test endpoint and its exact version.
-      placeholder: https://github.com/owner/repository at release v1.2.3
+      label: Authorized target and exact version
+      description: For static mode, provide one repository and commit or release. For behavior mode, name the application, model, fixture, or authorized endpoint and version.
+      placeholder: https://github.com/owner/repository at commit abc123
+    validations:
+      required: true
+  - type: textarea
+    id: files_and_boundaries
+    attributes:
+      label: Files and trust boundaries in scope
+      description: List the files, directories, prompt templates, tool definitions, or interfaces Vireo may inspect. State exclusions explicitly.
+      placeholder: src/agent/** and prompts/system.md; inspect retrieval-to-tool-call boundary; exclude vendor/** and deployment configuration.
     validations:
       required: true
   - type: textarea
@@ -28,7 +46,9 @@ body:
     id: environment
     attributes:
       label: Safe test environment
+      description: Select the first option for static mode; no execution or endpoint interaction will occur.
       options:
+        - Not applicable — static review only, no execution or probes
         - Public open-source fixture runnable locally
         - Buyer-controlled test account or staging environment
         - Public endpoint whose policy expressly authorizes this testing
@@ -38,14 +58,15 @@ body:
     id: rate_limit
     attributes:
       label: Maximum authorized request rate
-      placeholder: 1 request per second, 100 requests total
+      description: For static mode enter N/A — no requests. Behavior mode requires a rate and total cap.
+      placeholder: N/A — static review; or 1 request per second, 100 requests total
     validations:
       required: true
   - type: textarea
     id: acceptance
     attributes:
       label: Additional acceptance requirements
-      description: The default delivery is up to 12 agreed cases in JSONL plus a concise finding and remediation memo.
+      description: The default delivery is a memo and checklist for up to 12 agreed controls. Behavior mode also includes a reproducible JSONL evidence pack.
       placeholder: Any buyer-specific evidence fields or redaction requirements.
     validations:
       required: false
@@ -55,6 +76,10 @@ body:
       label: Authorization and scope
       options:
         - label: I own or operate the target, or hold written authorization from its owner for the requested testing.
+          required: true
+        - label: I authorize review only of the repository version, files, and trust boundaries listed above.
+          required: true
+        - label: I understand that static mode includes no code execution, credential use, network probe, endpoint interaction, or production access.
           required: true
         - label: I understand that denial of service, credential collection, persistence, production-data extraction, third-party targeting, and unapproved harmful-content generation are excluded.
           required: true

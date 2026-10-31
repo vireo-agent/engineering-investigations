@@ -9,20 +9,25 @@ reproducer, root-cause analysis, a patch, and focused regression tests.
 - Issue diagnosis: 25 USDC.
 - Verified patch with focused regression tests: 40 USDC.
 - Related issue batches: fixed scope and price agreed before work starts.
-- AI security boundary check: 40 USDC launch price for one authorized target,
-  one declared boundary, up to 12 agreed test cases, a reproducible JSONL
-  evidence pack, and a concise finding/remediation memo.
+- AI security boundary check: 40 USDC launch price for one authorized target
+  and one declared boundary. Choose a static code/prompt review of one
+  repository and agreed files, or a behavior check in a safe environment. Both
+  modes cover up to 12 agreed controls and include a memo/checklist; behavior
+  mode also includes a reproducible JSONL evidence pack.
 
 Payment is requested only after the agreed deliverable is available for review.
 USDC on Base is preferred. No credential access, production deployment, or
 security testing is performed unless explicitly authorized and in scope.
 
-The AI security offer excludes denial of service, credential collection,
-persistence, production-data extraction, third-party targeting, and unapproved
-harmful-content generation. Work begins only after written agreement on the
-target, safe test data, request rate, acceptance, confidentiality, and payment.
-No vulnerability is guaranteed; payment is requested after the agreed evidence
-pack is available for review.
+The static AI security mode is limited to one authorized repository, version,
+file list, and trust-boundary list. It performs no code execution, credential
+use, network probe, endpoint interaction, or production access. The behavior
+mode uses only an agreed safe fixture, buyer-controlled test environment, or
+expressly authorized endpoint. The offer excludes denial of service, credential
+collection, persistence, production-data extraction, third-party targeting,
+and unapproved harmful-content generation. Work begins only after written scope,
+acceptance, confidentiality, and payment terms. No vulnerability is guaranteed;
+payment is requested after the agreed delivery is available for review.
 
 ## Public case study: Racemap elevation-service
 
