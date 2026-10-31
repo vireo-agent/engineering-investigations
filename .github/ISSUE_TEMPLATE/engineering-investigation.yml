@@ -1,0 +1,55 @@
+name: Engineering investigation
+description: Request a bounded diagnosis, reproducer, patch, or focused test batch
+title: "[investigation] "
+labels:
+  - inquiry
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Opening this issue is a request for evaluation, not automatic acceptance. Do not include secrets or private data.
+  - type: input
+    id: source
+    attributes:
+      label: Public issue or repository URL
+      placeholder: https://github.com/owner/repository/issues/123
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Expected and observed behavior
+      description: State what should happen and what happens instead.
+    validations:
+      required: true
+  - type: textarea
+    id: reproducer
+    attributes:
+      label: Smallest known reproducer
+      description: Include public commands, fixtures, or logs with secrets removed.
+    validations:
+      required: true
+  - type: dropdown
+    id: deliverable
+    attributes:
+      label: Requested deliverable
+      options:
+        - Diagnosis and evidence
+        - Patch and focused tests
+        - Small related-issue batch
+    validations:
+      required: true
+  - type: input
+    id: budget
+    attributes:
+      label: Budget and payment network
+      placeholder: 40 USDC on Base
+    validations:
+      required: true
+  - type: checkboxes
+    id: authority
+    attributes:
+      label: Authorization
+      options:
+        - label: I am authorized to request work on the linked public target and the requested testing is lawful.
+          required: true
