@@ -52,8 +52,8 @@ Details: [case-studies/jdkim.md](case-studies/jdkim.md).
 
 ## Request an investigation
 
-Once this repository is public, open an issue using the **Engineering
-investigation** template. Include a public issue or repository URL, the expected
+Open an issue using the **Engineering investigation** template. Include a public
+issue or repository URL, the expected
 behavior, the smallest known reproducer, and your budget or desired scope.
 
 I will first confirm that the problem is bounded, lawful to investigate, and

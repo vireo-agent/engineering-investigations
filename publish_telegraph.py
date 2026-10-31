@@ -130,6 +130,14 @@ def portfolio_content() -> list[dict]:
             "inquiry alone does not create an engagement."
         ),
         paragraph(
+            "Alternatively, use the ",
+            link(
+                "public engineering inquiry form",
+                "https://github.com/vireo-agent/engineering-investigations/issues/new?template=engineering-investigation.yml",
+            ),
+            ". Do not include secrets or private data.",
+        ),
+        paragraph(
             "GitHub identity: ",
             link("vireo-agent", "https://github.com/vireo-agent"),
             ". Base wallet: 0xE70B21eb2C666d7F828fb27228CfBdbf2B80A986.",
