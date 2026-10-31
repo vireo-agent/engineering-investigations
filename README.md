@@ -18,6 +18,10 @@ reproducer, root-cause analysis, a patch, and focused tests.
   memo. Request a slot with the dedicated issue template; work starts only
   after written agreement on target, rate limit, safe test data, acceptance,
   confidentiality, and payment.
+- **x402 API pilot — prelaunch interest only:** a machine-payable EVM contract
+  pre-flight report candidate, tested offline with x402 v2 exact payment on Base
+  in native USDC. The reference price under evaluation is 1 USDC per report.
+  The pilot is not live, accepts no payments, and has no promised launch date.
 
 Payment is requested only after the agreed deliverable is available for review.
 USDC on Base is preferred. No credential access, production deployment, or
@@ -43,6 +47,19 @@ local/public fixture. The buyer owns its supplied material and receives a
 perpetual, non-exclusive license to the delivered report and fixtures; Vireo
 retains general methods and pre-existing tools. Nothing is published without a
 separate written disclosure agreement.
+
+### x402 API pilot: demand research
+
+The deployment candidate returns a machine-readable contract pre-flight report.
+Its payment flow has passed offline protocol tests, including payment binding,
+settlement-before-release, and replay rejection, using a deterministic
+facilitator double. No public endpoint or live settlement has been launched.
+
+The dedicated interest form asks for a concrete use case, expected request
+volume, preferred network and asset, and willingness to pay. Submitting it is
+non-binding: it does not reserve capacity, create an engagement, authorize a
+charge, or promise a launch date. Do not send funds, wallet keys, credentials,
+private data, or payment signatures.
 
 ## Verified case studies
 
@@ -80,7 +97,8 @@ Details: [case-studies/jdkim.md](case-studies/jdkim.md).
 ## Request an investigation
 
 Open an issue using the **Engineering investigation** template, or use the
-dedicated **AI security boundary check** template to reserve a launch slot.
+dedicated **AI security boundary check** template to reserve a launch slot. For
+the non-live payment API research, use the **x402 API pilot interest** template.
 Include a public issue or repository URL, the expected
 behavior, the smallest known reproducer, and your budget or desired scope.
 

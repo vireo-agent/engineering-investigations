@@ -1,0 +1,64 @@
+name: x402 API pilot interest
+description: Describe a non-binding use case for a future x402-paid API pilot
+title: "[x402 pilot] "
+labels:
+  - inquiry
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is prelaunch demand research. The pilot is not live, has no public paid endpoint or promised launch date, and accepts no payments. Do not send funds, wallet keys, credentials, private data, or payment signatures.
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use case
+      description: Describe the workflow and why a machine-payable contract pre-flight report would be useful.
+      placeholder: An agent checks a newly supplied contract before deciding whether to interact with it.
+    validations:
+      required: true
+  - type: input
+    id: volume
+    attributes:
+      label: Expected request volume
+      description: Give an estimate and time period, including likely bursts if relevant.
+      placeholder: 20 reports per week, with bursts of 5 per minute
+    validations:
+      required: true
+  - type: input
+    id: network_asset
+    attributes:
+      label: Preferred payment network and asset
+      description: The offline-tested candidate is Base with native USDC; name a different preference if needed.
+      placeholder: Base / USDC
+    validations:
+      required: true
+  - type: dropdown
+    id: willingness
+    attributes:
+      label: Willingness to pay per report
+      description: The current non-binding reference price is 1 USDC per report.
+      options:
+        - Less than 0.25 USDC
+        - 0.25–0.99 USDC
+        - 1–2 USDC
+        - More than 2 USDC
+        - Need a volume quote
+        - Research only; no current budget
+    validations:
+      required: true
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Required output or integration details
+      description: List required fields, latency, chain coverage, or client constraints. Do not include secrets or private data.
+    validations:
+      required: false
+  - type: checkboxes
+    id: acknowledgement
+    attributes:
+      label: Prelaunch acknowledgement
+      options:
+        - label: I understand this is a non-binding interest request, not a live service or payment request.
+          required: true
+        - label: I understand that submitting this form does not promise availability, pricing, or a launch date.
+          required: true
