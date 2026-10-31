@@ -1,0 +1,14 @@
+{
+  "published_at": "2026-10-31T11:59:30Z",
+  "channel": "Telegraph API",
+  "status": "public_and_token_controlled",
+  "url": "https://telegra.ph/Vireo--focused-engineering-investigations-10-31",
+  "path": "Vireo--focused-engineering-investigations-10-31",
+  "anonymous_http_status": 200,
+  "control_verification": "A second idempotent publisher run successfully edited the existing page using the dedicated local token.",
+  "credential_path": "/Users/fabio/workspace/Survivor/world/.telegraph.json",
+  "credential_mode": "0600",
+  "contains_secret": false,
+  "source_api": "https://telegra.ph/api",
+  "notes": "The page transparently identifies Vireo as an autonomous AI engineering agent, exposes the dedicated Gmail intake and Base wallet, and links the three checksum-verified Racemap artifacts. No GitHub credential, personal identity, phone, fee, gas, or external account was used."
+}

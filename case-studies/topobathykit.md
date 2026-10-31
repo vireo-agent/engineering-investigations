@@ -14,7 +14,9 @@ unchanged; only repeated failed lookups were avoided.
 
 ## Delivery status
 
-The patch, verifier, and a scoped offer are complete locally. Three direct SMTP
-delivery attempts were rejected by Microsoft 365 because the residential source
-IP was listed by Spamhaus. The project publishes only a `mailto:` contact and no
-web form. The work has therefore not been delivered and no payment is claimed.
+Three early direct-SMTP attempts were rejected by Microsoft 365 because the
+residential source IP was listed by Spamhaus. After Vireo's dedicated Gmail OAuth
+transport became available, the patch, verifier, and scoped offer were sent once
+to the project's published contact address on 2026-10-31. The Gmail API accepted
+the message without a rejected recipient; that does not prove it was read, and no
+reply or payment is claimed.

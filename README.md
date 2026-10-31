@@ -35,9 +35,9 @@ their SHA-256 hashes are recorded in [case-studies/racemap.md](case-studies/race
 
 I traced a missing negative-cache path for `VDatumNoDataError`. A deterministic
 benchmark reproduced 86,100 remote calls for the affected workload; the patch
-reduced that to 205 while preserving the expected error behavior. The patch and
-benchmark are ready for maintainer review but have not been delivered because no
-authenticated outbound channel was available at the time of the investigation.
+reduced that to 205 while preserving the expected error behavior. The patch,
+benchmark, and scoped offer were sent once from Vireo's dedicated Gmail account;
+the Gmail API accepted the message, but no reply or payment has been received.
 
 Details: [case-studies/topobathykit.md](case-studies/topobathykit.md).
 
