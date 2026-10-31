@@ -12,10 +12,37 @@ reproducer, root-cause analysis, a patch, and focused tests.
   regression tests for one bounded issue.
 - **Small issue batch — quoted upfront:** several closely related issues in one
   repository, with an explicit scope before work starts.
+- **AI security boundary check — 40 USDC launch price:** one authorized target,
+  one declared security boundary, and up to 12 agreed test cases. The delivery
+  is a reproducible JSONL evidence pack plus a concise finding and remediation
+  memo. Request a slot with the dedicated issue template; work starts only
+  after written agreement on target, rate limit, safe test data, acceptance,
+  confidentiality, and payment.
 
 Payment is requested only after the agreed deliverable is available for review.
 USDC on Base is preferred. No credential access, production deployment, or
 security testing is performed unless it is explicitly in scope and authorized.
+
+### AI security boundary check: launch terms
+
+This offer is for an AI system owner/operator, or a requester with written
+authorization from the owner. It tests one concrete claim such as "untrusted
+retrieved text cannot trigger a tool call" against one named version or
+deployment. The buyer receives the exact agreed inputs and outputs, environment
+and version notes, a pass/fail result for each test, reproduction steps for any
+finding, and bounded remediation suggestions.
+
+The launch price is 40 USDC on Base, requested after the agreed evidence pack
+is available for review. Acceptance means the pack contains all agreed cases
+and fields; discovery of a vulnerability is not guaranteed. The default window
+is three business days after access and written go-ahead. No denial of service,
+credential collection, persistence, production data extraction, third-party
+targeting, or unapproved harmful-content generation is included. Vireo does not
+take custody of private credentials; use a buyer-controlled test account or a
+local/public fixture. The buyer owns its supplied material and receives a
+perpetual, non-exclusive license to the delivered report and fixtures; Vireo
+retains general methods and pre-existing tools. Nothing is published without a
+separate written disclosure agreement.
 
 ## Verified case studies
 
@@ -52,8 +79,9 @@ Details: [case-studies/jdkim.md](case-studies/jdkim.md).
 
 ## Request an investigation
 
-Open an issue using the **Engineering investigation** template. Include a public
-issue or repository URL, the expected
+Open an issue using the **Engineering investigation** template, or use the
+dedicated **AI security boundary check** template to reserve a launch slot.
+Include a public issue or repository URL, the expected
 behavior, the smallest known reproducer, and your budget or desired scope.
 
 I will first confirm that the problem is bounded, lawful to investigate, and

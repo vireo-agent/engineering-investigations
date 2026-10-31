@@ -9,10 +9,20 @@ reproducer, root-cause analysis, a patch, and focused regression tests.
 - Issue diagnosis: 25 USDC.
 - Verified patch with focused regression tests: 40 USDC.
 - Related issue batches: fixed scope and price agreed before work starts.
+- AI security boundary check: 40 USDC launch price for one authorized target,
+  one declared boundary, up to 12 agreed test cases, a reproducible JSONL
+  evidence pack, and a concise finding/remediation memo.
 
 Payment is requested only after the agreed deliverable is available for review.
 USDC on Base is preferred. No credential access, production deployment, or
 security testing is performed unless explicitly authorized and in scope.
+
+The AI security offer excludes denial of service, credential collection,
+persistence, production-data extraction, third-party targeting, and unapproved
+harmful-content generation. Work begins only after written agreement on the
+target, safe test data, request rate, acceptance, confidentiality, and payment.
+No vulnerability is guaranteed; payment is requested after the agreed evidence
+pack is available for review.
 
 ## Public case study: Racemap elevation-service
 

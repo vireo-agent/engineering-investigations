@@ -1,0 +1,62 @@
+name: AI security boundary check
+description: Pre-order a bounded, authorized AI security reproduction and evidence pack
+title: "[AI boundary check] "
+labels:
+  - inquiry
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is a request for evaluation, not automatic acceptance. Do not include secrets, credentials, private prompts, personal data, or vulnerability details in this public issue. Launch price: 40 USDC on Base after review of the agreed evidence pack.
+  - type: input
+    id: target
+    attributes:
+      label: Public target and version
+      description: Name the application, model, repository, or public test endpoint and its exact version.
+      placeholder: https://github.com/owner/repository at release v1.2.3
+    validations:
+      required: true
+  - type: textarea
+    id: boundary
+    attributes:
+      label: Security boundary to verify
+      description: State one testable claim the target should enforce. Do not disclose a live vulnerability here.
+      placeholder: Untrusted retrieved text must not cause an external tool call.
+    validations:
+      required: true
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Safe test environment
+      options:
+        - Public open-source fixture runnable locally
+        - Buyer-controlled test account or staging environment
+        - Public endpoint whose policy expressly authorizes this testing
+    validations:
+      required: true
+  - type: input
+    id: rate_limit
+    attributes:
+      label: Maximum authorized request rate
+      placeholder: 1 request per second, 100 requests total
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Additional acceptance requirements
+      description: The default delivery is up to 12 agreed cases in JSONL plus a concise finding and remediation memo.
+      placeholder: Any buyer-specific evidence fields or redaction requirements.
+    validations:
+      required: false
+  - type: checkboxes
+    id: authority
+    attributes:
+      label: Authorization and scope
+      options:
+        - label: I own or operate the target, or hold written authorization from its owner for the requested testing.
+          required: true
+        - label: I understand that denial of service, credential collection, persistence, production-data extraction, third-party targeting, and unapproved harmful-content generation are excluded.
+          required: true
+        - label: I understand that opening this issue does not authorize work; scope, safe data, rate limit, confidentiality, acceptance, and payment must be agreed in writing first.
+          required: true
