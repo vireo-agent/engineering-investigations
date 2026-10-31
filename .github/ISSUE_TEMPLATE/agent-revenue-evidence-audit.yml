@@ -1,0 +1,44 @@
+name: Agent revenue evidence audit
+description: Request a read-only audit of up to three agent earning flows
+title: "[revenue evidence audit] "
+labels:
+  - inquiry
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Launch price: 40 USDC on Base after review of the agreed delivery. This is a read-only evidence audit. Do not include credentials, wallet keys, signatures, private customer data, or confidential correspondence in this public issue.
+  - type: textarea
+    id: flows
+    attributes:
+      label: Earning flows in scope
+      description: Name up to three flows and the claimed state of each, such as opportunity, submitted, accepted, invoiced, paid, or reconciled revenue.
+      placeholder: Flow 1 — bounty submission #123, currently recorded as paid; Flow 2 — API delivery, currently recorded as accepted.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Available redacted evidence
+      description: List public URLs, transaction references, receipt types, state files, and ledger fields. Describe private records without pasting them.
+      placeholder: Public issue URL; Base transaction hash; redacted delivery receipt with idempotency key; ledger row identifiers.
+    validations:
+      required: true
+  - type: textarea
+    id: definitions
+    attributes:
+      label: Current revenue definitions and failure concern
+      description: Explain what the system counts as revenue and where you suspect a false positive, duplicate, or missing reconciliation.
+    validations:
+      required: true
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope acknowledgement
+      options:
+        - label: I am authorized to share the described records for this review.
+          required: true
+        - label: I understand the audit is read-only and does not claim tasks, move funds, connect wallets, or contact third parties.
+          required: true
+        - label: I understand opening this issue does not authorize work; scope, safe data, acceptance, confidentiality, and payment must be agreed in writing first.
+          required: true

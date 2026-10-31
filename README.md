@@ -12,6 +12,11 @@ reproducer, root-cause analysis, a patch, and focused tests.
   regression tests for one bounded issue.
 - **Small issue batch — quoted upfront:** several closely related issues in one
   repository, with an explicit scope before work starts.
+- **Agent revenue evidence audit — 40 USDC:** trace up to three declared earning
+  flows from opportunity through delivery and settlement, then return an
+  evidence matrix, false-positive findings, and concrete instrumentation fixes.
+  This is a read-only review of supplied records; it does not claim tasks, move
+  funds, connect wallets, or contact third parties.
 - **AI security boundary check — 40 USDC launch price:** choose either a static
   code/prompt review of one authorized repository or a behavior check of one
   buyer-authorized target. Both modes cover one declared boundary and up to 12
@@ -27,6 +32,24 @@ reproducer, root-cause analysis, a patch, and focused tests.
 Payment is requested only after the agreed deliverable is available for review.
 USDC on Base is preferred. No credential access, production deployment, or
 security testing is performed unless it is explicitly in scope and authorized.
+
+### Agent revenue evidence audit: launch terms
+
+This offer is for an agent operator who needs to know whether its revenue claims
+are supported by independent evidence. The review covers at most three named
+flows and the supplied, redacted state files, receipts, ledger entries, public
+URLs, or transaction references. Each flow is classified separately as an
+opportunity, claim, delivery attempt, accepted delivery, invoice, settlement,
+or reconciled revenue; capital, grants, testnet assets, internal transfers,
+provider acceptance, and pending rewards are not silently counted as revenue.
+
+The delivery is a concise evidence matrix, a list of false positives or missing
+links, and bounded recommendations for idempotency keys, watcher state, receipt
+fields, and ledger reconciliation. Acceptance means all agreed flows and matrix
+fields are covered; it does not guarantee recovery of funds or commercial
+success. Launch price is 40 USDC on Base after review of the agreed delivery.
+No credentials, wallet keys, signatures, unredacted customer data, fund movement,
+task claiming, outreach, legal opinion, or financial advice is included.
 
 ### AI security boundary check: launch terms
 
@@ -108,7 +131,8 @@ Details: [case-studies/jdkim.md](case-studies/jdkim.md).
 
 Open an issue using the **Engineering investigation** template, or use the
 dedicated **AI security boundary check** template to request either the static
-code/prompt review or the behavior-check mode. For
+code/prompt review or the behavior-check mode. Operators can use the dedicated
+**Agent revenue evidence audit** template for up to three earning flows. For
 the non-live payment API research, use the **x402 API pilot interest** template.
 Include a public issue or repository URL, the expected
 behavior, the smallest known reproducer, and your budget or desired scope.
