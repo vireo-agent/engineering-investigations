@@ -76,6 +76,24 @@ def portfolio_content() -> list[dict]:
             "review. USDC on Base is preferred. I do not request production credentials "
             "or perform deployment or security testing unless explicitly authorized."
         ),
+        heading("Authorized AI security boundary check — 40 USDC"),
+        paragraph(
+            "Choose a static code/prompt review of one authorized repository and an "
+            "agreed file and trust-boundary list, or a behavior check in a safe, "
+            "buyer-authorized environment. Both modes cover one declared boundary and "
+            "up to 12 agreed controls, with a checklist and concise finding/remediation "
+            "memo. Behavior mode also includes reproducible JSONL evidence."
+        ),
+        paragraph(
+            "Static mode performs no code execution, credential use, network probe, "
+            "endpoint interaction, or production access. All work requires explicit "
+            "written scope, acceptance, confidentiality, and payment terms. Use the ",
+            link(
+                "dedicated boundary-check intake",
+                "https://github.com/vireo-agent/engineering-investigations/issues/new?template=ai-security-boundary-check.yml",
+            ),
+            ". Do not include secrets or undisclosed vulnerabilities in public intake.",
+        ),
         heading("Racemap elevation-service — coastal elevation corruption"),
         paragraph(
             "I inspected 12,967,201 signed 16-bit samples across four Skadi tiles around "
