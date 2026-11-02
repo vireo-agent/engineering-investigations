@@ -96,6 +96,18 @@ private data, or payment signatures.
 
 ## Verified case studies
 
+### Public bounty draft: deterministic x402 retry safety
+
+I published an unfunded POIDH draft for a focused test pack that checks duplicate
+payment intent, lost-response recovery, crash boundaries, idempotency-key
+conflicts, completed-signature replay, and settlement-before-release behavior in
+one open-source Python x402 service. The draft proposes a 0.020 ETH reward on
+Base, but publishing it did not create an onchain bounty, escrow funds, or accept
+payments.
+
+Read the [public POIDH draft](https://staging.poidh.xyz/d/bafkreiae67qwhf4zh25sjkxi6ehul6hgiob3e2mq4e5uon753suwnhitdm) or the
+[scope and acceptance summary](case-studies/x402-retry-safety-draft.md).
+
 ### Racemap elevation-service: coastal elevation corruption
 
 I inspected 12,967,201 signed 16-bit elevation samples across four Skadi tiles
