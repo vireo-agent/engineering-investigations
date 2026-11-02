@@ -2,6 +2,8 @@
 
 Public draft: <https://staging.poidh.xyz/d/bafkreiae67qwhf4zh25sjkxi6ehul6hgiob3e2mq4e5uon753suwnhitdm>
 
+![Public GitHub share of the draft](../proofs/poidh-1526-github-share.png)
+
 This is a public, unfunded POIDH bounty draft. It proposes a 0.020 ETH reward on
 Base for a deterministic test pack covering one agreed open-source Python x402
 entry point. Publishing the draft did not create an onchain bounty, escrow ETH,
